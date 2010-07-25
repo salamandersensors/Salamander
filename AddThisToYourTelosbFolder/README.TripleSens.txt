@@ -1,7 +1,7 @@
 $Id: README.TripleSens,v 1.1 2010/5/15 22:18:07 ckharnett Exp $
 
 README for TripleSensor Board
-@author ckharnett <ckharnett@louisville.edu>
+@author ckharnett <c0harn01@louisville.edu>
 
 Description:
 
