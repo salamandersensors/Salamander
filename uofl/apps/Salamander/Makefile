@@ -1,0 +1,3 @@
+COMPONENT = SalamanderC
+include $(MAKERULES)
+

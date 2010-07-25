@@ -1,0 +1,26 @@
+This is the code to install on Crossbow TelosB motes so they can find and communicate with the triple sensor boards.
+
+Instructions--Windows XP with Cygwin (or you could do on Linux)
+
+This program can be installed on CrossbowTelosB, Moteiv TmoteSky, or other compatible wireless sensor board to discover and poll sensors on a 1-Wire bus. 
+
+It will poll sensors with the spacing "ShortTime" and then wait "LongTime" before starting again. You can adjust the "ShortTime" and "LongTime" variables in SalamanderM.nc that is found inside the uofl folder.
+
+To install, put the "uofl" folder in the "contributions" area of your TinyOS-1.x installation.
+
+For example the original Moteiv Boomerang installation CD creates a folder called C:/Cygwin/opt/moteiv/tinyos-1.x/contrib/     -In this case, you should put the whole uofl folder in the contrib folder.
+
+
+
+To load the program onto a Crossbow Telosb or Moteiv Tmote Sky mote, plug the mote into a USB port and navigate to the build folder from a Cygwin prompt:
+
+cd ../../opt/moteiv/tinyos-1.x/contrib/uofl/apps/Salamander
+
+Then:
+
+make telosb reinstall,6
+
+(or instead of 6, put whatever number you want that radio to broadcast as its "name").
+
+To modify the code, most changes are generally made to SalamanderM.nc
+Note that you also need to load some new files into the telosb folder if you want to recompile. These files communicate with the DS 2450 A/D converter and DS1820B. These files and a description are in "AddThisToYourTelosbFolder."
